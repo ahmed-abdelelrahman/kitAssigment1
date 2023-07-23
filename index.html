@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body class="">
+    <!-- Component Start -->
+
+    <!-- container -->
+    <div class="grid dashboard">
+      <div
+        class="sidebar flex flex-col bg-white text-gray-700 shadow max-h-max"
+      >
+        <!-- Side Nav Bar-->
+
+        <div
+          class="sidebar1 h-16 flex py-2 mb-16 lg:flex-col items-center w-full"
+        >
+          <!-- Logo Section -->
+          <a class="h-6 w-6 mx-auto" href="http://svelte.dev/">
+            <img
+              class="h-6 w-6 mx-auto"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/512px-Svelte_Logo.svg.png"
+              alt="svelte logo"
+            />
+          </a>
+          <a class="py-5 font-bold text-gray-400"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+        </div>
+
+        <ul>
+          <!-- Items Section -->
+          <li class="hover:bg-gray-100">
+            <a
+              href="."
+              class="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500"
+            >
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-100">
+            <a
+              href="."
+              class="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500"
+            >
+              <i class="fa-solid fa-book"></i>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-100">
+            <a
+              href="."
+              class="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500"
+            >
+              <i class="fa-regular fa-newspaper"></i>
+            </a>
+          </li>
+
+          <li class="hover:bg-gray-100">
+            <a
+              href="."
+              class="h-16 px-6 flex flex justify-center items-center w-full focus:text-orange-500"
+            >
+              <i class="fa-regular fa-user"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div
+          class="sidebar3 mt-auto h-16 flex lg:flex-col py-2 items-center w-full"
+        >
+          <!-- Action Section -->
+          <button
+            class="h-16 mb-2 w-10 mx-auto flex flex justify-center items-center w-full focus:text-orange-500 hover:bg-red-200 focus:outline-none"
+          >
+            <i class="fa-regular fa-bell"></i>
+          </button>
+          <a class="py-2 mb-5"
+            ><i class="fa-solid fa-arrow-right-from-bracket"></i
+          ></a>
+        </div>
+      </div>
+
+      <div
+        class="section2 flex flex-col flex-shrink-0 border-r mb-0 border-gray-300 bg-gray-100"
+      >
+        <!-- first section in section2 -->
+        <div class="section2-1 flex justify-center items-center gap-2 mt-5">
+          <div
+            class="w-16 h-16 bg-blue-500 rounded-full flex justify-center items-center overflow-hidden"
+          >
+            <img class="w-full h-full object-cover" src="./self.jpg" />
+          </div>
+          <div>
+            <h3 class="font-bold">Hi Mike,</h3>
+
+            <h4 class="text-small">welcome back.</h4>
+          </div>
+        </div>
+        <!-- second section in section2 -->
+        <div class="section2-2 flex flex-col gap-4 justify-center ml-10 mt-5">
+          <h3 class="font-bold font-serif">Today</h3>
+          <div class="flex item1 flex-col">
+            <span class="font-bold text-2xl">$19.888</span
+            ><span class="text-xs text-gray-700">account balance</span>
+          </div>
+          <div class="flex item2 flex-col">
+            <span class="font-bold text-2xl">$19.888</span
+            ><span class="text-xs text-gray-700">account balance</span>
+          </div>
+          <div class="flex item3 flex-col">
+            <span class="font-bold text-2xl">$19.888</span
+            ><span class="text-xs text-gray-700">account balance</span>
+          </div>
+          <div class="item4">
+            <button
+              class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-8 rounded-lg flex items-center justify-center"
+            >
+              I want to
+              <i class="fa-solid fa-caret-down ml-2"></i>
+            </button>
+          </div>
+        </div>
+        <!-- thrid section in section2 -->
+        <div class="section2-3 flex flex-col gap-4 justify-center ml-10 mt-5">
+          <h3 class="font-bold">Recent transaction</h3>
+
+          <div
+            class="flex flex-col border-2 border-b-gray-600 border-transparent py-4 mr-5"
+          >
+            <p class="lg:text-xs">2023-08-07</p>
+            <p class="font-bold lg:text-xs text-gray-700">
+              withdrawal Transfer to Bank-XXX11
+            </p>
+          </div>
+          <div
+            class="flex flex-col border-2 border-b-gray-600 border-transparent py-4 mr-5"
+          >
+            <p class="lg:text-xs">2023-08-07</p>
+            <p class="font-bold lg:text-xs text-gray-700">
+              withdrawal Transfer to Bank-XXX11
+            </p>
+          </div>
+          <div
+            class="flex flex-col border-2 border-b-gray-600 border-transparent py-4 mr-5"
+          >
+            <p class="lg:text-xs">2023-08-07</p>
+            <p class="font-bold lg:text-xs text-gray-700">
+              withdrawal Transfer to Bank-XXX11
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- section3 -->
+      <div class="section3 flex grow flex-col flex-grow px-20 py-10">
+        <!-- first section in section3 -->
+        <div class="flex flex-col">
+          <h3 class="font-sm text-blue-600 font-sefri font-bold">
+            Retirement Income
+          </h3>
+          <h4 class="text-2xl">Starting year 2056</h4>
+        </div>
+        <!-- second section in section3 -->
+        <div class="section3-2 flex gap-6 mt-10">
+          <div
+            class="item3-1 py-2 pl-0 pr-16 border-2 border-transparent border-b-blue-600"
+          >
+            <h2 class="font-bold text-xl">$300.000</h2>
+            <span class="text-sm font-bold text-gray-400">My Goal</span>
+          </div>
+          <div
+            class="py-2 pl-0 pr-16 border-2 border-transparent border-b-blue-600"
+          >
+            <h2 class="font-bold text-xl">$300.000</h2>
+            <span class="text-sm font-bold text-gray-400">My Goal</span>
+          </div>
+          <div
+            class="py-2 pl-0 pr-16 border-2 border-transparent border-b-blue-600"
+          >
+            <h2 class="font-bold text-xl">$300.000</h2>
+            <span class="text-sm font-bold text-gray-400">My Goal</span>
+          </div>
+        </div>
+        <!-- third section in section3 -->
+        <div class="mt-5">
+          <h2 class="font-bold text-lg">Contribution Overtime</h2>
+          <div style="width: 100%; max-width: 700px">
+            <canvas style="width: 100%; max-width: 700px" id="ctx"></canvas>
+          </div>
+        </div>
+        <!-- fourth section in section3 -->
+        <div class="">
+          <h2>How do i compare to my peers?</h2>
+          <p>these numbers represent current goal achivment.</p>
+          <div class="flex items-center justify-center">
+            <div class="flex flex-col">
+              <div
+                class="font-bold border-2 border-transparent border-b-gray-300 pb-2"
+              >
+                Age:<span class="text-gray-400 text-sm"> Under 30</span>
+                <i class="fa-solid fa-caret-down ml-2 text-gray-400"></i>
+              </div>
+              <div
+                class="font-bold border-2 border-transparent border-b-gray-300 pb-2"
+              >
+                salary: <span class="text-gray-400 text-sm">k30-k40</span>
+                <i class="fa-solid fa-caret-down ml-2 text-gray-400"></i>
+              </div>
+              <div class="font-bold">
+                Gender:<span class="text-gray-400 text-sm"> male</span>
+                <i class="fa-solid fa-caret-down ml-2 text-gray-400"></i>
+              </div>
+            </div>
+            <div class="progress-circle progress-75 average">
+              <span></span>
+            </div>
+            <div class="progress-circle progress-75 Top"><span></span></div>
+            <div class="progress-circle progress-75 Me"><span></span></div>
+          </div>
+        </div>
+      </div>
+      <!-- section4 -->
+      <div class="section4 px-1 py-10 flex flex-col flex-shrink-0">
+        <div class="bg-gray-100 rounded-lg px-5 py-2">
+          <h2 class="mb-2">Retirement Startegy</h2>
+          <div class="mb-5">
+            <p class="mb-2">Employee Contribution</p>
+            <div
+              class="gray-bar w-9/12 bg-gray-200 rounded-full h-2 dark:bg-gray-700"
+            >
+              <div
+                class="blue-bar bg-blue-600 h-2 rounded-full"
+                style="width: 45%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="pb-10 border-2 border-transparent border-b-gray-300 border-solid"
+          >
+            <p class="mb-2">Retirement Age</p>
+            <div
+              class="gray-bar w-9/12 bg-gray-200 rounded-full h-2 dark:bg-gray-700"
+            >
+              <div
+                class="blue-bar bg-blue-600 h-2 rounded-full"
+                style="width: 45%"
+              ></div>
+            </div>
+          </div>
+          <div class="flex font-bold px-1 py-4 items-center justify-between">
+            <span>Employer Contribution</span><span>8.4%</span>
+          </div>
+          <div class="flex font-bold px-1 items-center justify-between">
+            <span>Interest Rate</span><span>5%</span>
+          </div>
+          <div class="px-2 py-5">
+            <button
+              class="w-full rounded-lg bg-blue-700 hover:bg-blue-500 text-white py-2 px-4 rounded"
+            >
+              Update
+            </button>
+          </div>
+          <div class="flex justify-center">
+            <a href="#" class="text-blue-700 text-md"
+              >View Help Docs <i class="fa-solid fa-angle-right"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="flex flex-col px-1 pl-4 mt-7 py-5 border-2 border-l-blue-500 border-transparent"
+        >
+          <span>Are you considering a</span><strong>Housing Advance?</strong>
+          <p class="text-gray-500 font-bold text-sm">
+            Limited time reduced interest.
+          </p>
+
+          <a class="text-blue-700 pt-2"
+            >Learn More<i class="fa-solid p-1 fa-angle-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [20, 25, 30, 35, 40, 45, 50, 60, 65], // responsible for how many bars are gonna show on the chart
+          // create 12 datasets, since we have 12 items
+          // data[0] = labels[0] (data for first bar - 'Standing costs') | data[1] = labels[1] (data for second bar - 'Running costs')
+          // put 0, if there is no data for the particular bar
+
+          datasets: [
+            {
+              label: "Employer: k76.300 ",
+              data: [0, 20, 21, 50, 51, 70, 80, 90, 110, 120, 130, 150],
+              backgroundColor: "rgb(0, 92, 230)",
+            },
+            {
+              label: "Employee: k52.300",
+              data: [0, 20, 20, 50, 50, 70, 80, 80, 90, 90, 120, 130, 150],
+              backgroundColor: "rgb(51, 133, 255)",
+            },
+            {
+              label: "Total interest: k244.300",
+              data: [0, 20, 20, 50, 50, 70, 80, 90, 110, 120, 130, 150],
+              backgroundColor: "rgb(132, 179, 255)",
+            },
+          ],
+        },
+        options: {
+          responsive: false,
+          legend: {
+            position: "top", // place legend on the right side of chart
+            labels: {
+              borderRadius: "50%",
+            },
+          },
+          scales: {
+            xAxes: [
+              {
+                stacked: true,
+                barPercentage: 0.4, // Adjust the width of the bars (0.8 means 80% of the available space)
+                // this should be set to make the bars stacked
+                gridLines: {
+                  display: false, // Hide the x-axis grid lines
+                },
+              },
+            ],
+            yAxes: [
+              {
+                stacked: true,
+                gridLines: {
+                  borderDash: [7], // Set the borderDash property to create a dotted line effect
+                }, // this also..
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.progress-circle {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ebebeb;
+}
+
+.progress-circle:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-animation: colorload 2s;
+  animation: colorload 2s;
+}
+.progress-circle:before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 16px;
+}
+.average:before {
+  content: "Average";
+}
+.Top:before {
+  content: "Top";
+  left: 34px;
+}
+.Me::before {
+  content: "Me";
+  left: 34px;
+}
+.progress-circle span {
+  font-size: 1rem;
+  color: #8b8b8b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 70px;
+  height: 70px;
+  line-height: 69px;
+  margin-left: -35px;
+  margin-top: -35px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1;
+}
+
+.progress-circle span:after {
+  content: "75%";
+  font-weight: 600;
+  color: #8b8b8b;
+}
+
+.progress-circle.progress-75:after {
+  background-image: linear-gradient(
+      0deg,
+      #7ad66a 50%,
+      transparent 50%,
+      transparent
+    ),
+    linear-gradient(270deg, #7ad66a 50%, #ebebeb 50%, #ebebeb);
+}
+.blue-bar {
+  position: relative;
+}
+.blue-bar::after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  right: 0;
+  top: -6px;
+}
+.gray-bar {
+  position: relative;
+}
+.gray-bar::after {
+  position: absolute;
+  content: "12%";
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -35px;
+  top: -12px;
+}
+.dashboard {
+  grid-template-columns: repeat(4, auto);
+}
+@media (max-width: 767px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: fixed;
+    display: flex;
+    right: 0;
+    bottom: 0;
+  }
+  .section2-1 {
+    font-size: 40px;
+  }
+  .section2-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 40px;
+  }
+  .section2-2 h3 {
+    grid-column: span 2;
+  }
+  .section2-2 .item1 {
+    grid-column: span 2;
+  }
+  .section2-2 .item4 {
+    grid-column: span 2;
+    font-size: large;
+  }
+  .section2-3 div {
+    font-size: 50px;
+  }
+  .section2-3 {
+    text-align: left;
+    font-size: 40px;
+  }
+  .section2-3 div {
+    border: none;
+    padding: 2px;
+
+    font-size: large;
+  }
+  .section3-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .section4 {
+    text-align: center;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    font-size: large;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar .sidebar1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar .sidebar3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1230px) {
+  .dashboard {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .sidebar .section3 {
+    grid-column: span 2;
+    grid-column-start: 1;
+  }
+  .section2 {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 40px;
+  }
+  .section2-2 .item4 {
+    font-size: medium;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .section2-3 > div {
+    font-size: 50px;
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+  .sidebar ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar .sidebar1 {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar .sidebar3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
