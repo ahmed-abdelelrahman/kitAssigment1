@@ -783,7 +783,7 @@ video {
   }
 }
 
-@media (min-width: 1230px) {
+@media (max-width: 1230px) {
   .dashboard {
     display: grid;
     grid-template-columns: auto auto;
